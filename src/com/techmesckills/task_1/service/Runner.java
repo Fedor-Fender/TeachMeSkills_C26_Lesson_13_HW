@@ -41,7 +41,8 @@ public class Runner {
         if (VerificationUser.checkVerificationUser(login, password, confirmPassword)) {
             System.out.println("User input correct date");
         } else {
-            System.out.println("\nAccount details are entered incorrectly");
+            System.out.println("Account details are entered incorrectly");
         }
     }
+
 }

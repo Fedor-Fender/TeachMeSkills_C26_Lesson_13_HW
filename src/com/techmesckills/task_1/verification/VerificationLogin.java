@@ -15,5 +15,8 @@ public class VerificationLogin {
         if (login.isBlank()) {
             throw new WrongLoginException("Login can't be empty or contain space symbol");
         }
+        if (login.contains(" ")) {
+            throw new WrongLoginException("Your login contains interword space");
+        }
     }
 }

@@ -17,12 +17,12 @@ public class VerificationPassword {
                 throw new WrongPasswordException("Your login exceeds more than twenty symbols");
             }if (i == ' ') {
                 throw new WrongPasswordException("Your password contains interword space");
-            }if (i >= 1 && i <= 9) {
+            }if (i >= 48 && i <= 57) {
                 numberSymbolPassword = true;
             }
         }
         if (!numberSymbolPassword) {
-            throw new WrongPasswordException("Your password must contain at least one digit");// выбрасывает это исключение всегда,при вводе пароля с цифрой так и без цифры
+            throw new WrongPasswordException("Your password must contain at least one digit");
         }
         if (passwordUser.length > IConstant.MAX_COUNT_PASSWORD) {
             throw new WrongPasswordException("Your login exceeds more than twenty symbols");
